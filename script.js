@@ -67,6 +67,7 @@ function calculator(keyEntry){
       equalFlag = false;
       updateWindow(currentEntry);
       updateOperation('');
+      isDecimal = false;
       
     
   } else if(operators.includes(keyEntry)) {
