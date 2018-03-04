@@ -1,5 +1,6 @@
 # Calculator
 html, css, js calculator code camp project
+
 Known Issues:
 - Only 3 decimal rounding
 - No commas in number
