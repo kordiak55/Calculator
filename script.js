@@ -9,6 +9,7 @@ let operationFlag = false;
 let multiOperations = 0;
 let equalFlag = false;
 let lastKey;
+let isDecimal = false;
 let operators = ["+", "-", "X", "/", "^", "root", "%"];  
 
 $("document").ready(function(){
@@ -22,27 +23,36 @@ $("document").ready(function(){
 function calculator(keyEntry){
 
   console.log('Key Pressed', keyEntry);
-
-
   
   if(Number.isInteger(Number(keyEntry)) || keyEntry == "."){
   //NUMBER ENTRY  
     
-
-    //Is it a new number? 
-    if(newEntryFlag){
-      newEntryFlag = false;
+    //multi decimal catch
+    if(keyEntry == '.' && isDecimal == false){
       
-      currentEntry = keyEntry;
-      
-    } else {
-      
+      isDecimal = true;
       currentEntry += keyEntry
+      updateWindow(currentEntry);
+
+    } else if(keyEntry == '.' && isDecimal == true) {
+
+    } else {
+
+      //Is it a new number? 
+      if(newEntryFlag){
+        newEntryFlag = false;
+        
+        currentEntry = keyEntry;
+        
+      } else {
+        
+        currentEntry += keyEntry
+        
+      }
       
+      updateWindow(currentEntry);
+    
     }
-    
-    updateWindow(currentEntry);
-    
     
 
   } else if(keyEntry == "C") {
@@ -62,6 +72,7 @@ function calculator(keyEntry){
   } else if(operators.includes(keyEntry)) {
     //OPERATIONS
     newEntryFlag = true;
+    isDecimal = false;
 
     if(operators.includes(lastKey) && operators.includes(keyEntry)){
       //update the operation, but nothing else.
@@ -91,7 +102,7 @@ function calculator(keyEntry){
           }
 
         }
-  
+  1
       } else {
         input1 = currentEntry;
   
@@ -164,8 +175,8 @@ function calculate(){
     result = root(Number(input1)); 
     break;
       
-    case '%':
     //console.log('Case /');
+    case '%':
     result = percent(Number(input1)); 
     break;
       
