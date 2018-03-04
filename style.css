@@ -9,13 +9,19 @@ sup{
 .center {
   margin: auto;
   width: 50%;
-  /*border: 3px solid rgb(73, 73, 73);*/
   padding: 10px;
 }
 
+#footer{
+  position: fixed;
+  bottom: 0;
+  font-family: 'Audiowide', cursive;
+  color: #252525;
+  text-align: center;
+  width: 100%;
+}
 
 #calculator{
-  /*background: linear-gradient(90deg, #363739, transparent 3%,  transparent 97%,  #363739);*/
   box-shadow: inset 0 0 5px 3px #6b6b6b;
   background: 
     linear-gradient(#363739, transparent 3%,  transparent 97%,  #363739),
@@ -26,7 +32,6 @@ sup{
   padding: 5px;
   border-radius: 10px 10px 10px 10px;
 }
-
 
 #calcTop{
   display: flex;
@@ -42,7 +47,6 @@ sup{
 }
 
 #solarPanel{
-  /*background: repeating-linear-gradient(90deg,  #502b2b 5%, #301701 14%, #502b2b 25%);*/
   background-color: #456d79;
   padding: 2px;
   border-style: solid;
@@ -52,8 +56,6 @@ sup{
   height: 34px;
   width: 100%;
   display: flex;
-  /*flex: 1;1
-  /*align-self: flex-end;*/
 }
 
 #solarCell{
@@ -68,14 +70,12 @@ sup{
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   color:#464646;
-  font-size: 20;
+  font-size: 20px;
   width: 185px;
   align-self: flex-start;
-  
 }
 
 .calcBtn{
-  /*background color must be applied after gradient for correct effect*/
   background: linear-gradient(#ffffff81 5%, transparent 10%,  transparent 88%,  #ffffff81);
   background-color: #363739;
   border: solid;
@@ -89,21 +89,15 @@ sup{
   display: inline-block;
   font-size: 25px;
   cursor: pointer;
-  /*background-color: #363739;*/
   width: 50px;
   height: 40px;
   margin: 5px 6px;
-  padding: 0px;
-  /*box-shadow: 3px 2px 2px #7a7a7a;*/
-  
+  padding: 0px;  
 }
 
 .clearBtn{
   background-color: #974f65;
-  /*box-shadow: 3px 2px 2px #673645*/
 }
-
-
 
 #calcScreen {
   font-family: 'Orbitron', sans-serif;
@@ -116,7 +110,6 @@ sup{
   padding: 10px 12px 16px 10px;
   text-align: right;
   font-size: 30px;
-  
 }
 
 #calcScreenBorder {
@@ -132,18 +125,14 @@ sup{
   flex: 0 0 85%;
 }
 
-
 #calcOperation {
   background-color:#999999;
   width: 100%;
   padding: 5px;
   font-size: 18px;
-
 }
 
 .calcRow {
   display: flex;
-  
-  
 }
 
