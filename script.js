@@ -28,11 +28,12 @@ function calculator(keyEntry){
   //NUMBER ENTRY  
     
     //multi decimal catch
-    if(keyEntry == '.' && isDecimal == false){
+    if(keyEntry == '.' && isDecimal == false && newEntryFlag == false){
       
       isDecimal = true;
       currentEntry += keyEntry
       updateWindow(currentEntry);
+      newEntryFlag = false;
 
     } else if(keyEntry == '.' && isDecimal == true) {
 
@@ -121,6 +122,7 @@ function calculator(keyEntry){
     updateWindow(input1);
     updateOperation('');
     equalFlag = true;
+    newEntryFlag = true;
 
   } else {
 
@@ -193,6 +195,11 @@ function calculate(){
 
 
 function updateWindow(newVal){
+
+  if(newVal == '.'){
+    newVal = '0.';
+    currentEntry = '0.'
+  } 
 
   let lengthChecker = String(newVal)
 
